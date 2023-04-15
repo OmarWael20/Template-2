@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="master.css">
+  <!-- Google Icon Link -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title></title>
+</head>
+
+<body>
+  <div id="loader">
+    <img src="7YQl.gif" alt="">
+  </div>
+  <div class="parent">
+    <div class="circle"></div>
+    <header>
+      <div class="container">
+        <a href="" class="logo">
+          <img src="logo.png">
+        </a>
+        <nav>
+          <span 
+          onclick="openMenu()"
+          class="material-icons-outlined menu">
+            menu
+          </span>
+          <ul id="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">What's New</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="landing">
+      <div class="container">
+        <div class="landing-text">
+          <h1>it's not just Coffee<br>it's <span>Starbucks</span></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quis error quibusdam deleniti facere similique nemo dicta quisquam numquam impedit accusamus laborum blanditiis temporibus excepturi minima asperiores minus, nostrum placeat?</p>
+          <a href="" class="button">
+            Learn More
+          </a>
+        </div>
+        <div class="landing-img">
+          <img 
+          id="poster"
+          src="img1.png">
+        </div>
+      </div>
+    </div>
+    <div class="thumbs">
+      <img 
+      src="thumb1.png" 
+      onclick="changeImg('img1.png');
+      changeColor('#017143')">
+      
+      <img 
+      src="thumb2.png" 
+      onclick="changeImg('img2.png')
+      changeColor('#eb7495')" >
+      
+      <img 
+      src="thumb3.png" 
+      onclick="changeImg('img3.png')
+      changeColor('#d752b1')">
+    </div>
+  </div>
+  <script>
+    function changeImg(source) {
+      document.querySelector("#poster").src = source;
+    };
+    
+    function changeColor(color) {
+      document.querySelector(".circle").style.background = color;
+    };
+    
+    function openMenu() {
+      let menu = document.getElementById("menu");
+      menu.style.display = "flex";
+    };
+  </script>
+  <script>
+    let loader = document.getElementById("loader");
+    
+    window.addEventListener("load" , function() {
+       loader.style.display = "none";
+    })
+    
+  </script>
+</body>
+
+</html>
